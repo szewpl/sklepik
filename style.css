@@ -1,0 +1,47 @@
+input[name="searchengine"]{
+    width: 98%;
+    height: 85%;
+    font-size: 35px;
+    font-family: 'Source Code Pro',monospace;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px){
+    [class="space"] {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    input[name="searchengine"] {
+        width: 60%;
+        height: 50%;
+        font-size: 8px;
+        font-family: 'Source Code Pro',monospace;
+        justify-content: center;
+    }
+}
+
+#mycanvas{
+    margin: 0%;
+}
+#searchenginediv{
+    width: 50%;
+}
+
+.svg-icon {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+}
+  
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+fill: black;
+}
+  
+.svg-icon circle {
+stroke: black;
+stroke-width: 1;
+}
