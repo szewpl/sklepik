@@ -1,0 +1,32 @@
+.navigation{
+    font-size: 24px;
+}
+.awatar{
+    margin-left: auto;
+}
+#formsmall{
+    display: none !important;
+}
+#formbig{
+    display: flex;
+}
+@media screen and (max-width: 810px) {
+    #searchinput {
+        width: 190px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    #formbig{
+        display: none !important;
+    }
+    #searchinput2{
+        width: 100% !important;
+    }
+    #formsmall{
+        display: flex !important;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95% !important;
+    }
+}
