@@ -1,6 +1,3 @@
-.navigation{
-    font-size: 24px;
-}
 .awatar{
     margin-left: auto;
 }
@@ -15,12 +12,20 @@
         width: 190px !important;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 575px) {
     #formbig{
         display: none !important;
     }
     #searchinput2{
         width: 100% !important;
+    }
+    hr {
+        border: 0;
+        clear:both;
+        display:block !important;
+        width: 100%;               
+        background-color:white;
+        height: 1px;
     }
     #formsmall{
         display: flex !important;
