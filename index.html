@@ -5,26 +5,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sklep</title>
+	<style>
+		#hr1{
+			transform: rotate(90deg);
+			width: 45px;
+			margin-left: 140px;
+			margin-top: -20px;
+		}
+	</style>
 </head>
 <body style="background-color: #565656;">
-	<nav style="background-color: #252525;position: fixed;width: 100%;margin-left: -8px;height: 50px;margin-top: -8px;">
-		<div id="divbuttona" style="width: 64px;height: 50px;margin:0px;">
-			<a href="" style="all: unset;cursor: context-menu;color: #efbdff;font-weight: bold;font-size: 18px;"><div style="position: absolute;margin-left: 20px;margin-top: 4px;height: 50px;width: 64px;">
-				<button id="siema1" style="all: unset;height: 30px;width: 64px;border-radius: 10px;position: absolute;background-color: #efbdff;z-index: -1;margin-top: 4px;"></button>
-				<button id="siema" style="all: unset;border-radius: 10px;background-color: #9715d0;width: 64px;height: 30px;text-align: center;z-index: 1;margin-left: 4px;margin-top: 8px;">Sklep</button>
+	<nav style="background-color: #252525;position: fixed;width: 100%;margin-left: -8px;height: 62px;margin-top: -8px;display: block;">
+		<div id="divbuttona" style="width: 64px;height: 50px;margin-left: 20px;">
+			<a href="" style="all: unset;cursor: context-menu;color: #efbdff;font-weight: bold;font-size: 22px;"><div style="position: absolute;margin-left: 20px;margin-top: 6px;height: 50px;width: 64px;">
+				<button id="siema1" style="all: unset;height: 37px;width: 85px;border-radius: 10px;position: absolute;background-color: #efbdff;z-index: -1;margin-top: 4px;"></button>
+				<button id="siema" style="all: unset;border-radius: 10px;background-color: #9715d0;width: 85px;height: 37px;text-align: center;z-index: 1;margin-left: 4px;margin-top: 8px;">Nazwa</button>
 			</div></a>
+		</div>
+		<hr id="hr1">	
+		<div style="margin-top: -20px;margin-left: 195px;">
+			<form>
+				<input type="text">
+				<button>hello</button>
+			</form>
 		</div>
 	</nav>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 	$("#divbuttona").mouseenter(function(){
-		$("#siema").animate({"margin-top":"3px"},{duration:300, queue:false});
-		$("#siema1").animate({"margin-top":"7px"},{duration:300, queue:false});
+		$("#siema").animate({"margin-top":"3px"},{duration:100, queue:false});
+		$("#siema1").animate({"margin-top":"7px"},{duration:100, queue:false});
 	});
 	$("#divbuttona").mouseleave(function(){
-		$("#siema").animate({"margin-top":"8px"},{duration:300, queue:false});
-		$("#siema1").animate({"margin-top":"4px"},{duration:300, queue:false});
+		$("#siema").animate({"margin-top":"8px"},{duration:100, queue:false});
+		$("#siema1").animate({"margin-top":"4px"},{duration:100, queue:false});
 	});
 </script>
 </html>
