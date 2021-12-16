@@ -6,21 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sklep</title>
 </head>
-<body>
-	<nav style="background-color: #303030;position: fixed;width: 100%;margin-left: -8px;height: 60px;margin-top: -10px;">
-		<div id="divbuttona" style="position: absolute;margin-left: 10px;">
-			<button style="all: unset;height: 50px;width: 150px;border-radius: 10px;position: absolute;background-color: rgba(179, 156, 208,1);z-index: -1;margin-top: 4px;"></button>
-			<button id="siema" style="all: unset;border-radius: 10px;background-color: rgba(132, 94, 194,1);width: 150px;height: 50px;text-align: center;z-index: 1;margin-left: 6px;margin-top: 10px;">no witam witam</button>
+<body style="background-color: #565656;">
+	<nav style="background-color: #252525;position: fixed;width: 100%;margin-left: -8px;height: 50px;margin-top: -8px;">
+		<div id="divbuttona" style="width: 64px;height: 50px;margin:0px;">
+			<a href="" style="all: unset;cursor: context-menu;color: #efbdff;font-weight: bold;font-size: 18px;"><div style="position: absolute;margin-left: 20px;margin-top: 4px;height: 50px;width: 64px;">
+				<button id="siema1" style="all: unset;height: 30px;width: 64px;border-radius: 10px;position: absolute;background-color: #efbdff;z-index: -1;margin-top: 4px;"></button>
+				<button id="siema" style="all: unset;border-radius: 10px;background-color: #9715d0;width: 64px;height: 30px;text-align: center;z-index: 1;margin-left: 4px;margin-top: 8px;">Sklep</button>
+			</div></a>
 		</div>
 	</nav>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 	$("#divbuttona").mouseenter(function(){
-		$("#siema").animate({"margin-top":"-1px"},{duration:300, queue:false});
+		$("#siema").animate({"margin-top":"3px"},{duration:300, queue:false});
+		$("#siema1").animate({"margin-top":"7px"},{duration:300, queue:false});
 	});
 	$("#divbuttona").mouseleave(function(){
-		$("#siema").animate({"margin-top":"10px"},{duration:300, queue:false});
+		$("#siema").animate({"margin-top":"8px"},{duration:300, queue:false});
+		$("#siema1").animate({"margin-top":"4px"},{duration:300, queue:false});
 	});
 </script>
 </html>
