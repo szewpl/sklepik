@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep</title>
+    <style>
+        .menu {
+        align-items: center;
+        background-color: #fee6e3;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        font-family: Inter,sans-serif;
+        font-size: 16px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .menu:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+        }
+
+        .menu:hover:after {
+        transform: translate(0, 0);
+        }
+
+        .menu:active {
+        background-color: #ffdeda;
+        outline: 0;
+        }
+
+        .menu:hover {
+        outline: 0;
+        }
+
+        @media (min-width: 768px) {
+            .menu {
+                padding: 0 40px;
+            }
+        }
+        .box {
+            width: 100px; 
+            height: 50px;  
+            border: solid 5px #757546;
+            border-color: #757546 transparent transparent transparent;
+            border-radius: 50%/50px 50px 0 0;
+            position: fixed;
+            top: 75px;
+            left: 1400px;
+        }
+        .box1 {
+            width: 100px; 
+            height: 50px;  
+            border: solid 5px #757546;
+            border-color: #757546 transparent transparent transparent;
+            border-radius: 50%/50px 50px 0 0;
+            position: fixed;
+            top: 48.5px;
+            left: 1475.54px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body style="background-color:#f5f5dc;">
+    <div style="margin-top: 89px;display: flex;justify-content: center;  
+    align-items: center;margin-right: 10px;">
+        <button style="width: 150px;margin-left: 25px;" class="menu" >Strona Głowna</button>
+        <button style="width: 150px;margin-left: 25px;" class="menu">Sklep</button>
+        <button style="width: 150px;margin-left: 25px;" class="menu">Kontakt</button>
+    </div>
+    <div style="width:90%;height:450px;background-color:#DCC4F5;margin-left: auto;margin-right: auto;text-align: center;border-radius: 50px 5px;">
+            <p style="padding-top: 100px;color: #f5f5dc;font-size: 90px;-webkit-touch-callout: none;
+            -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Sklep</p>
+            <p style="color: #f5f5dc;font-size: 50px;-webkit-touch-callout: none;
+            -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Rafał Ptaszek</p>
+         
+    </div>
+    <div style="width: 1000px;height:1000px;border-radius:50%;background-color:#9B9DC2;position:fixed;top: 700px;left: -500px;">
+        
+    </div>
+    <div class="box"></div>
+    <div class="box1"></div>
+</body>
+</html>
