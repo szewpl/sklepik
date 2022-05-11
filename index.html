@@ -84,6 +84,35 @@
             left: 1475.54px;
             transform: rotate(180deg);
         }
+        #wave {
+        position: relative;
+        height: 450px;
+        width: 90%;
+        }
+
+        #wave:before {
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 100% 50%;
+                width: 53%;
+            height: 400px;
+            background-color: #f5f5dc;
+            right: 0px;
+            top: 300px;
+        }
+        #wave:after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 60%;
+            height: 400px;
+            background-color: #DCC4F5;
+            left: 0;
+            top: 135px;
+            z-index: -1;
+        }
     </style>
 </head>
 <body style="background-color:#f5f5dc;">
@@ -93,16 +122,17 @@
         <button style="width: 150px;margin-left: 25px;" class="menu">Sklep</button>
         <button style="width: 150px;margin-left: 25px;" class="menu">Kontakt</button>
     </div>
-    <div style="width:90%;height:450px;background-color:#DCC4F5;margin-left: auto;margin-right: auto;text-align: center;border-radius: 50px 5px;">
-            <p style="padding-top: 100px;color: #f5f5dc;font-size: 90px;-webkit-touch-callout: none;
-            -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Sklep</p>
-            <p style="color: #f5f5dc;font-size: 50px;-webkit-touch-callout: none;
-            -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Rafał Ptaszek</p>
-         
-    </div>
+    <div id="wave" style="width:90%;height:400px;background-color:#DCC4F5;margin-left: auto;margin-right: auto;text-align: center;border-radius: 50px 5px;">
+        <p style="padding-top: 100px;color: #f5f5dc;font-size: 90px;-webkit-touch-callout: none;
+        -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Sklep</p>
+        <p style="color: #f5f5dc;font-size: 50px;-webkit-touch-callout: none;
+        -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Rafał Ptaszek</p>
+    </div>  
+      
     <div style="width: 1000px;height:1000px;border-radius:50%;background-color:#9B9DC2;position:fixed;top: 700px;left: -500px;">
         
     </div>
+    
     <div class="box"></div>
     <div class="box1"></div>
 </body>
