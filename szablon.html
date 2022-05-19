@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sklep</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+    <style>
+        #wave {
+        position: relative;
+        height: 43vh;
+        width: 90%
+        }
+
+        #wave:before {
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 100% 50%;
+                width: 53%;
+            height:  10.76426264800861vh;
+            background-color: #fce5cd;
+            right: 0px;
+            top: 40.04305705059203vh;
+            z-index: 5;
+        }
+        #wave:after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 60%;
+            height:  10.76426264800861vh;
+            background-color: #CBB3FC;
+            left: 0;
+            top: 35.522066738428414vh;
+            z-index: -15;
+        }
+        @media only screen and (max-width: 1200px){
+            #wave{
+                width: 90% !important;
+                margin-top: 0px !important;
+            }
+            .blob-btn{
+                font-size: 10px !important;
+                width: 25% !important;
+            }
+            #kulka{
+              top:  75.34983853606028vh !important;
+              visibility: hidden;
+            }
+            #kulka1{
+              visibility: hidden;
+            }
+        }
+        #b1{
+          width: 100px !important;
+          height: 6.027987082884822vh !important;
+        }
+        #img{
+          width: 5.382131324004305vh !important;
+          height: 5.382131324004305vh !important;
+          justify-content: center !important;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:#fce5cd;">
+    <div class="buttons">
+      <button id="b1" class="blob-btn animate__animated animate__fadeInTopRight">
+        <img id="img" src="baske.png">
+        <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            </span>
+        </span>
+      </button>  
+            <button id="b2" class="blob-btn animate__animated animate__fadeInTopRight">
+                Konto
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+              </button>          
+    </div>
+    <div style="width: 10px; height:10px;">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <div id="containerproduct">
+
+    </div>
+    <div id="kulka1" class="kulka1 animate__animated animate__fadeInBottomRight" style="width:  104.16666666666667vw;height: 215.28525296017222vh;border-radius:50%;background-color:#B0977D;position:fixed;top: 59.20344456404736vh;left: 62.5vw;z-index: -12;"></div>
+    <div id="kulka" class="animate__animated animate__fadeInBottomLeft" style="width: 52.083333333333336vw;height:107.64262648008611vh;border-radius:50%;background-color:#9486B0;position:fixed;top: 64.58557588805166vh;left: -26.041666666666668vw;z-index: -1;"></div>
+</body>
+</html>

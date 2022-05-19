@@ -10,11 +10,12 @@ body {
 }
 
 .buttons {
-  margin-top: 5.382131324004305vh;
+  margin-top: 1.0764262648008611vh;
+  margin-right: 1.0764262648008611vh;
   text-align: center;
   border-radius: 3.2292787944025836vh;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 .blob-btn {
@@ -31,7 +32,6 @@ body {
   outline: none;
   border: none;
   transition: color 0.5s;
-  cursor: pointer;
   border-radius: 3.2292787944025836vh;
   width: 13%;
 }
