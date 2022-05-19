@@ -10,9 +10,9 @@ body {
 }
 
 .buttons {
-  margin-top: 50px;
+  margin-top: 5.382131324004305vh;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 3.2292787944025836vh;
   display: flex;
   justify-content: center;
 }
@@ -20,19 +20,19 @@ body {
 .blob-btn {
   z-index: 1;
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 2.1528525296017222vh;
+  padding-bottom: 2.1528525296017222vh;
   text-align: center;
   text-transform: uppercase;
-  color: #A7C29B;
-  font-size: 16px;
+  color: #8FC9B9;
+  font-size: 1.7222820236813778vh;
   font-weight: bold;
   background-color: transparent;
   outline: none;
   border: none;
   transition: color 0.5s;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 3.2292787944025836vh;
   width: 13%;
 }
 
@@ -44,32 +44,32 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #A7C29B;
-  border-radius: 30px;
+  border: 0.21529vh solid #8FC9B9;
+  border-radius: 3.2292787944025836vh;
 }
 
 .blob-btn:after {
   content: "";
   z-index: -2;
   position: absolute;
-  left: 3px;
-  top: 3px;
+  left: 0.32293vh;
+  top: 0.32293vh;
   width: 100%;
   height: 100%;
   transition: all 0.3s 0.2s;
-  border-radius: 30px;
+  border-radius: 3.2292787944025836vh;
 }
 
 .blob-btn:hover {
   color: #FFFFFF;
-  border-radius: 30px;
+  border-radius: 3.2292787944025836vh;
 }
 
 .blob-btn:hover:after {
   transition: all 0.3s;
   left: 0;
   top: 0;
-  border-radius: 30px;
+  border-radius: 3.2292787944025836vh;
 }
 
 .blob-btn__inner {
@@ -80,7 +80,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 3.2292787944025836vh;
   background: #ffffff;
 }
 
@@ -93,10 +93,10 @@ body {
 
 .blob-btn__blob {
   position: absolute;
-  top: 2px;
+  top: 0.21529vh;
   width: 25%;
   height: 100%;
-  background: #A7C29B;
+  background: #8FC9B9;
   border-radius: 100%;
   transform: translate3d(0, 150%, 0) scale(1.7);
   transition: transform 0.45s;
