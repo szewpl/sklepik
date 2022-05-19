@@ -9,5 +9,4 @@
     {
         echo($one["name"]);
     }
-    echo "witam";
 ?>  

@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sklep</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
     <style>
         #wave {
         position: relative;
@@ -57,38 +66,34 @@
                 font-size: 12px !important;
             }
             #b2{
-                grid-column: 2;
-                grid-row: 1;
-                width: 150px !important;
-                font-size: 12px !important;
-            }
-            #b3{
                 grid-column: 1;
                 grid-row: 2;
                 width: 150px !important;
                 font-size: 12px !important;
             }
+            #b3{
+                grid-column: 1;
+                grid-row: 3;
+                width: 150px !important;
+                font-size: 12px !important;
+            }
             #b4{
+                grid-column: 2;
+                grid-row: 1;
+                width: 150px !important;
+                font-size: 12px !important;
+            }
+            #b5{
                 grid-column: 2;
                 grid-row: 2;
                 width: 150px !important;
                 font-size: 12px !important;
             }
-        }
-        body {
-        animation: pulse 2s infinite;
-        animation-iteration-count: 1;
-        }
-        #wave::before {
-        animation: pulse 2s infinite;
-        animation-iteration-count: 1;
-        }
-        @keyframes pulse {
-            0% {
-                background-color: #F5DCD0;
-            }
-            100% {
-                background-color: #F5F5dc;
+            #b6{
+                grid-column: 2;
+                grid-row: 3;
+                width: 150px !important;
+                font-size: 12px !important;
             }
         }
     </style>
@@ -96,7 +101,7 @@
 </head>
 <body style="background-color:#f5f5dc;">
     <div class="buttons">
-            <button id="b1" class="blob-btn" onclick="location.href='http://localhost/sklepik/'">
+            <button id="b1" class="blob-btn animate__animated animate__bounce" onclick="location.href='http://localhost/sklepik/'">
             Strona Głowna
             <span class="blob-btn__inner">
                 <span class="blob-btn__blobs">
@@ -108,7 +113,7 @@
             </span>
             </button>        
             <div class="przerwa" style="width: 2%;"></div>
-            <button  id="b2" class="blob-btn" onclick="location.href='http://localhost/sklepik/sklepdzieciecy.php';">
+            <button  id="b2" class="blob-btn animate__animated animate__bounce">
                 Sklep dzieciecy
                 <span class="blob-btn__inner">
                 <span class="blob-btn__blobs">
@@ -120,8 +125,8 @@
                 </span>
             </button>
             <div class="przerwa" style="width: 2%;"></div>
-          <button id="b3" class="blob-btn">
-            Sklep elektroniczny
+          <button id="b3" class="blob-btn animate__animated animate__bounce">
+            Sklep z odzieżą
             <span class="blob-btn__inner">
               <span class="blob-btn__blobs">
                 <span class="blob-btn__blob"></span>
@@ -132,8 +137,8 @@
             </span>
           </button>
           <div class="przerwa" style="width: 2%;"></div>
-          <button id="b4" class="blob-btn">
-            Sklep z odzieżą
+          <button id="b4" class="blob-btn animate__animated animate__bounce">
+            Sklep elektroniczny
             <span class="blob-btn__inner">
               <span class="blob-btn__blobs">
                 <span class="blob-btn__blob"></span>
@@ -142,7 +147,31 @@
                 <span class="blob-btn__blob"></span>
               </span>
             </span>
-          </button>          
+          </button>  
+          <div class="przerwa" style="width: 2%;"></div>
+          <button id="b5" class="blob-btn animate__animated animate__bounce" onclick="location.href='http://localhost/sklepik/'">
+            Kontakt
+            <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                </span>
+            </span>
+            </button> 
+            <div class="przerwa" style="width: 2%;"></div> 
+            <button id="b6" class="blob-btn animate__animated animate__bounce" onclick="location.href='http://localhost/sklepik/konto.php'">
+                Konto
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+                </button>          
     </div>
     <div style="width: 10px; height:10px;">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -156,7 +185,7 @@
       </svg>
     </div>
       
-    <div id="wave" style="width:60%;height:400px;background-color:#DCC4F5;margin-left: auto;margin-right: auto;text-align: center;border-radius: 50px 5px;margin-top: 40px;">
+    <div id="wave" class="animate__animated animate__wobble" style="width:60%;height:400px;background-color:#DCC4F5;margin-left: auto;margin-right: auto;text-align: center;border-radius: 50px 5px;margin-top: 40px;">
         <p style="padding-top: 50px;color: #f5f5dc;font-size: 90px;-webkit-touch-callout: none;
         -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">SKLEP</p>
         </br>
@@ -165,7 +194,7 @@
         <p style="color: #f5f5dc;font-size: 50px;-webkit-touch-callout: none;
         -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;font-family: Inter,sans-serif;">Rafał Ptaszek</p>
     </div>
-    <div id="kulka1" class="kulka1" style="width: 2000px;height:2000px;border-radius:50%;background-color:#F5C5C4;position:fixed;top: 550px;left: 1200px;z-index: -12;"></div>
-    <div id="kulka" style="width: 1000px;height:1000px;border-radius:50%;background-color:#9B9DC2;position:fixed;top: 600px;left: -500px;"></div>
+    <div id="kulka1" class="kulka1 animate__animated animate__fadeInBottomRight" style="width: 2000px;height:2000px;border-radius:50%;background-color:#F5C5C4;position:fixed;top: 550px;left: 1200px;z-index: -12;"></div>
+    <div id="kulka" class="animate__animated animate__fadeInBottomLeft" style="width: 1000px;height:1000px;border-radius:50%;background-color:#9B9DC2;position:fixed;top: 600px;left: -500px;z-index: -1;"></div>
 </body>
 </html>
