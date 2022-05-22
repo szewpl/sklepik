@@ -16,6 +16,7 @@ body {
   border-radius: 3.2292787944025836vh;
   display: flex;
   justify-content: right;
+  width: 50%;
 }
 
 .blob-btn {
@@ -33,7 +34,7 @@ body {
   border: none;
   transition: color 0.5s;
   border-radius: 3.2292787944025836vh;
-  width: 13%;
+  width: 26%;
 }
 
 .blob-btn:before {
@@ -63,6 +64,11 @@ body {
 .blob-btn:hover {
   color: #FFFFFF;
   border-radius: 3.2292787944025836vh;
+}
+
+.blob-btn:hover #img {
+  filter: brightness(0) invert(1);
+  transition: all 0.3s;
 }
 
 .blob-btn:hover:after {

@@ -18,6 +18,7 @@
     border-radius: 3.2292787944025836vh;
     display: flex;
     justify-content: right;
+    width: 50%;
   }
   
   $cyan: #8FC9B9;
@@ -40,7 +41,7 @@
     border: none;
     transition: color 0.5s;
     border-radius: 3.2292787944025836vh;
-    width: 13%;
+    width: 26%;
     
     &:before {
       content: "";
@@ -70,6 +71,10 @@
     &:hover {
       color: $dark;
       border-radius: 3.2292787944025836vh;
+      #img{
+        filter: brightness(0) invert(1);
+        transition: all 0.3s;
+      }
       
       &:after {
         transition: all 0.3s;

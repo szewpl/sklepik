@@ -51,8 +51,7 @@
                 margin-top: 0px !important;
             }
             .blob-btn{
-                font-size: 10px !important;
-                width: 25% !important;
+                width: 60% !important;
             }
             #kulka{
               top:  75.34983853606028vh !important;
@@ -69,15 +68,63 @@
         #img{
           width: 5.382131324004305vh !important;
           height: 5.382131324004305vh !important;
-          justify-content: center !important;
+          position: absolute !important;
+          margin: auto !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          bottom: 0 !important;
+        }
+        #search{
+          width: 50% !important;
+          justify-content: right !important;
+          margin-top: 1.0764262648008611vh !important;
+          display: flex !important;
+        }
+        #search #text{
+          color: #8FC9B9 !important;
+          border: solid 0px;
+          border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;
+          width: 60%;
+          padding-top: 2.1528525296017222vh !important;
+          padding-bottom: 2.1528525296017222vh !important;
+          height: 6.027987082884822vh !important;
+          background-color: transparent !important;
+          font-size: 32px !important;
+        }
+        #search #text:focus{
+          outline: none !important;
+        }
+        #search #submit{
+          border: solid 0;
+          border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;
+          width: 2.6041666666666665vw !important;
+          height:  5.382131324004305vh !important;
+          font-size: 32px !important;
+          margin-top: 0.6458557588805167vh !important;
+          background-color: transparent !important;
+        }
+        #search #submit img{
+          height:  4.3057050592034445vh !important;
+          pointer-events: none !important;
+        }
+        #search #submit:focus{
+          outline: none !important;
         }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-color:#fce5cd;">
+  <div style="display: flex;">
+    <div id="search" class="animate__animated animate__bounceInDown">
+        <input id="text" type="text">
+        <button id="submit" type="submit" onclick="location.href='http://localhost/sklepik/'">
+          <img src="loupe.png">
+        </button>
+    </div>
     <div class="buttons">
-      <button id="b1" class="blob-btn animate__animated animate__fadeInTopRight">
-        <img id="img" src="baske.png">
+      <button id="b1" class="blob-btn animate__animated animate__bounceInDown">
+        <img id="img" src="bag.png">
         <span class="blob-btn__inner">
             <span class="blob-btn__blobs">
             <span class="blob-btn__blob"></span>
@@ -87,7 +134,8 @@
             </span>
         </span>
       </button>  
-            <button id="b2" class="blob-btn animate__animated animate__fadeInTopRight">
+      <div style="width: 3%;"></div>
+            <button id="b2" class="blob-btn animate__animated animate__bounceInDown">
                 Konto
                 <span class="blob-btn__inner">
                     <span class="blob-btn__blobs">
@@ -99,6 +147,8 @@
                 </span>
               </button>          
     </div>
+  </div>
+    
     <div style="width: 10px; height:10px;">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
