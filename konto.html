@@ -1,0 +1,83 @@
+<style>
+    #buttons1{
+        width: 60% !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #container{
+        width: 70% !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #buttons2{
+        width: 100% !important;
+    }
+</style>
+<div style="margin-top: 60px;" id="container">
+    <div class="buttons" id="buttons1">
+        <button onclick="logowanie()" class="blob-btn animate__animated animate__bounceInDown">
+            <a>Logowanie</a>
+            <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                </span>
+            </span>
+        </button>  
+        <div style="width: 3%;"></div>
+            <button onclick="rejestracja()" class="blob-btn animate__animated animate__bounceInDown">
+            <a>Rejestracja</a>
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>          
+        </div>
+    </div>
+</div>
+<script>
+    function logowanie(){
+        
+    }
+    function rejestracja(){
+        const f = document.createElement("form");
+        f.setAttribute("method","post");
+        f.setAttribute("action","rejestracja.php");
+        f.setAttribute("style","width:60%;margin-left:auto;margin-right:auto;");
+        const i = document.createElement("input");
+        i.setAttribute('type', "text");
+        i.setAttribute('name', "username");
+        i.setAttribute("style","display:block;color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 100%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;");
+        const i1 = document.createElement("input");
+        i1.setAttribute('type', "email");
+        i1.setAttribute('name', "email");
+        i1.setAttribute("style","display:block;color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 100%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;margin-top:30px");
+        const i2 = document.createElement("input");
+        i2.setAttribute('type', "password");
+        i2.setAttribute('name', "password");
+        i2.setAttribute("style","color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 85%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;margin-top:30px");
+        const i3 = document.createElement("input");
+        i3.setAttribute('type', "button");
+        i3.setAttribute('name', "show");
+        i3.setAttribute('value', "show");
+        i3.id="s1";
+        const s = document.createElement("input");
+        s.setAttribute('type', "submit");
+        s.setAttribute("style","display:block;margin-top:30px");
+        f.appendChild(i);
+        f.appendChild(i1);
+        f.appendChild(i2);
+        f.appendChild(i3);
+        f.innerHTML += "<div class='buttons' id='buttons2'><button type='submit' class='blob-btn animate__animated animate__bounceInDown'><a>Zarejestruj się</a> <span class='blob-btn__inner'><span class='blob-btn__blobs'> <span class='blob-btn__blob'></span><span class='blob-btn__blob'></span> <span class='blob-btn__blob'></span><span class='blob-btn__blob'></span> </span> </span> </button> </div>";
+        document.getElementById("container").appendChild(f);
+    }
+    logowanie();
+</script>

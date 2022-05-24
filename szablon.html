@@ -9,11 +9,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-  <script src="main.js"></script>
     <style>
         #wave {
         position: relative;
@@ -111,6 +106,18 @@
         #search #submit:focus{
           outline: none !important;
         }
+        #s1:focus{
+          outline: none !important;
+        }
+        #s1{
+          color: #8FC9B9;
+          border: solid 0;
+          border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;
+          width: 15% !important;
+          height:  4.736275565123789vh !important;
+          background-color: transparent !important;
+          text-transform: uppercase;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -135,21 +142,21 @@
         </span>
       </button>  
       <div style="width: 3%;"></div>
-            <button id="b2" class="blob-btn animate__animated animate__bounceInDown">
-                Konto
-                <span class="blob-btn__inner">
-                    <span class="blob-btn__blobs">
-                    <span class="blob-btn__blob"></span>
-                    <span class="blob-btn__blob"></span>
-                    <span class="blob-btn__blob"></span>
-                    <span class="blob-btn__blob"></span>
-                    </span>
+        <button onclick="location.href='http://localhost/sklepik/konto.php';" id="b2" class="blob-btn animate__animated animate__bounceInDown">
+          <a id="textkonto"></a>
+            <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
                 </span>
-              </button>          
+            </span>
+          </button>          
     </div>
   </div>
     
-    <div style="width: 10px; height:10px;">
+    <div style="width: 10px; height:10px;z-index:-200;position:relative;">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
           <filter id="goo">
@@ -160,10 +167,8 @@
         </defs>
       </svg>
     </div>
-    <div id="containerproduct">
-
-    </div>
     <div id="kulka1" class="kulka1 animate__animated animate__fadeInBottomRight" style="width:  104.16666666666667vw;height: 215.28525296017222vh;border-radius:50%;background-color:#B0977D;position:fixed;top: 59.20344456404736vh;left: 62.5vw;z-index: -12;"></div>
     <div id="kulka" class="animate__animated animate__fadeInBottomLeft" style="width: 52.083333333333336vw;height:107.64262648008611vh;border-radius:50%;background-color:#9486B0;position:fixed;top: 64.58557588805166vh;left: -26.041666666666668vw;z-index: -1;"></div>
 </body>
 </html>
+<script src="main.js"></script>
