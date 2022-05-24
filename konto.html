@@ -14,6 +14,9 @@
     #buttons2{
         width: 100% !important;
     }
+    .placeholdery::placeholder{
+        color: #8FC9B9;
+    }
 </style>
 <div style="margin-top: 60px;" id="container">
     <div class="buttons" id="buttons1">
@@ -50,34 +53,91 @@
     function rejestracja(){
         const f = document.createElement("form");
         f.setAttribute("method","post");
-        f.setAttribute("action","rejestracja.php");
+        f.setAttribute("action","konto.php");
         f.setAttribute("style","width:60%;margin-left:auto;margin-right:auto;");
         const i = document.createElement("input");
         i.setAttribute('type', "text");
         i.setAttribute('name', "username");
-        i.setAttribute("style","display:block;color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 100%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;");
+        i.id = "username";
+        i.setAttribute("style","display:block;color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 100%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;margin-top:30px");
+        i.placeholder = "Nazwa użytkownika";
+        i.classList = "placeholdery";
+        const dive = document.createElement("div");
         const i1 = document.createElement("input");
         i1.setAttribute('type', "email");
         i1.setAttribute('name', "email");
-        i1.setAttribute("style","display:block;color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 100%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;margin-top:30px");
+        i1.setAttribute("style","display:block;color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 100%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;margin-top:30px;margin-bottom:10px;");
+        i1.placeholder = "Adres E-mail";
+        i1.classList = "placeholdery";
+        i1.id = "s3";
+        const a = document.createElement("a");
+        a.id = "text1";
+        dive.appendChild(i1);
+        dive.appendChild(a);
         const i2 = document.createElement("input");
         i2.setAttribute('type', "password");
         i2.setAttribute('name', "password");
+        i2.autocomplete = "on";
+        i2.id = "s2";
         i2.setAttribute("style","color: #8FC9B9 !important;border: solid 0px;border-bottom: solid 0.21528525296017223vh #8FC9B9 !important;width: 85%;padding-top: 2.1528525296017222vh !important;padding-bottom: 2.1528525296017222vh !important;height: 6.027987082884822vh !important;background-color: transparent !important;font-size: 32px !important;margin-top:30px");
+        i2.placeholder = "Hasło";
+        i2.classList = "placeholdery";
         const i3 = document.createElement("input");
         i3.setAttribute('type', "button");
         i3.setAttribute('name', "show");
-        i3.setAttribute('value', "show");
+        i3.setAttribute('value', "pokaż");
         i3.id="s1";
         const s = document.createElement("input");
         s.setAttribute('type', "submit");
-        s.setAttribute("style","display:block;margin-top:30px");
+        s.setAttribute("style","display:block;margin-top:40px");
+        s.id = "save";
         f.appendChild(i);
-        f.appendChild(i1);
+        f.appendChild(dive);
         f.appendChild(i2);
         f.appendChild(i3);
         f.innerHTML += "<div class='buttons' id='buttons2'><button type='submit' class='blob-btn animate__animated animate__bounceInDown'><a>Zarejestruj się</a> <span class='blob-btn__inner'><span class='blob-btn__blobs'> <span class='blob-btn__blob'></span><span class='blob-btn__blob'></span> <span class='blob-btn__blob'></span><span class='blob-btn__blob'></span> </span> </span> </button> </div>";
         document.getElementById("container").appendChild(f);
+        var s1 = document.getElementById("s1");
+        var s2 = document.getElementById("s2");
+        s1.onclick = function(){
+            if(s1.value == "pokaż"){
+                s1.value = "Ukryj";
+                s2.type="text";
+            }else{
+                s1.value = "pokaż";
+                s2.type = "password";
+            }
+        }
+        var s3 = document.getElementById("s3");
+        s3.addEventListener("input",function(){
+            var validRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            if (s3.value.match(validRegex)) {
+
+                var t = document.getElementById("text1");
+                t.innerText= "Poprawny E-mail";
+                t.setAttribute("style","color:#8FC9B9;")
+
+                return true;
+
+            } else {
+
+                var t = document.getElementById("text1");
+                t.innerText = "Niepoprawny E-mail";
+                t.setAttribute("style","color:red;");
+                return false;
+
+            }
+        });
+        var user = document.getElementById("username");
+        var object = {
+            t1:user.value,
+            t2:s3.value,
+            t3:s2.value
+        };
+        user.addEventListener("input",function(){console.log(object.t1);});        
+        /*var save = document.getElementById("save");
+        save.addEventListener("click",function(){localStorage.setItem});*/
     }
     logowanie();
 </script>
