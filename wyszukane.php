@@ -1,7 +1,8 @@
 <?php
     require("szablon.html");
     $mysqli = new mysqli("localhost", "root", "", "sklepik");
-    $query= "SELECT * FROM produkty";
+    $text = $_GET['text'];
+    $query= "SELECT * FROM produkty WHERE name LIKE '%$text%'";
     $result = $mysqli->query($query);
     $query1= "SELECT * FROM photos";
     $result1 = $mysqli->query($query1)->fetch_object();
@@ -13,7 +14,7 @@
         if($row->sale==0){
             $sale = "";
         }else{
-             $sale = $row->sale."zł";
+            $sale = $row->sale."zł";
         }
         if($i%2==0){
             echo <<< html
@@ -66,7 +67,7 @@
                     <p><span>$row->price</span>zł</p>
                 </div>
                 <div class="buttons">
-                    <button id="b6" type="submit" onclick="location.href='koszyk.php?id=$row->id'" class="blob-btn animate__animated animate__bounceInDown">
+                    <button id="b6" onclick="location.href='koszyk.php?id=$row->id'" class="blob-btn animate__animated animate__bounceInDown">
                         <a>Do koszyka</a>
                         <span class="blob-btn__inner">
                             <span class="blob-btn__blobs">
@@ -87,4 +88,4 @@
         
     }
     echo "</div>";
-?>  
+?>
