@@ -1,6 +1,7 @@
 <?php
     require("szablon.html");
     $mysqli = new mysqli("localhost", "root", "", "sklepik");
+<<<<<<< Updated upstream
     $query= "SELECT * FROM produkty";
     $result = $mysqli->query($query);
     $query1= "SELECT * FROM photos";
@@ -85,6 +86,16 @@
         $i++;
         }
         
+=======
+    $q = "SELECT * FROM produkty INNER JOIN photos USING(id)";
+    $result=$mysqli->query($q);
+    echo "<div style=\"display:grid;grid-template-columns: auto auto auto;\">";
+    while($row=$result->fetch_object())
+    {
+        echo "<div>
+            <div>$row->name</div>
+        <div>";
+>>>>>>> Stashed changes
     }
     echo "</div>";
 ?>  

@@ -1,5 +1,6 @@
 <?php
     require("szablon.html");
+<<<<<<< Updated upstream
     require("konto.html");
     $conn = new mysqli("localhost","root","","sklepik");
     error_reporting(0);
@@ -21,6 +22,14 @@
             $row=$result->fetch_object();
             setcookie('konto',"$row->id_account",time() + (10 * 365 * 24 * 60 * 60),'/');
         }
+=======
+    $mysqli = new mysqli("localhost", "root", "", "sklepik");
+    $zxc = "SELECT * FROM produkty";
+    $all = $mysqli->query($zxc);
+    foreach($all as $one)
+    {
+        echo($one["id"]);
+>>>>>>> Stashed changes
     }
     
     $conn->close();

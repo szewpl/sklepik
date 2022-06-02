@@ -72,7 +72,7 @@
       color: $dark;
       border-radius: 3.2292787944025836vh;
       #img{
-        filter: brightness(0) invert(1);
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(244deg) brightness(103%) contrast(105%);
         transition: all 0.3s;
       }
       
